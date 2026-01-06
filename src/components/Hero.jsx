@@ -97,16 +97,7 @@ const Hero = () => {
                                 </div>
 
                                 {/* Floating Badge */}
-                                <motion.div
-                                    animate={{ y: [0, -10, 0] }}
-                                    transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                                    className="absolute bottom-4 right-4 glass-panel p-4 rounded-xl shadow-xl bg-black/80"
-                                >
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-2.5 h-2.5 bg-brand-yellow rounded-full animate-pulse shadow-[0_0_10px_#FFD300]"></div>
-                                        <span className="text-sm font-bold text-white tracking-wide">OPEN TO WORK</span>
-                                    </div>
-                                </motion.div>
+                                
                             </motion.div>
 
                             {/* Mobile Social Links */}

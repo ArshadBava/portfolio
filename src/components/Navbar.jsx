@@ -68,7 +68,7 @@ const Navbar = () => {
                     {/* Right Side: Download CV & Mobile Menu */}
                     <div className="flex items-center gap-4">
                         <a
-                            href="/resume.pdf"
+                            href="/ARSHADBAVAMRESUME.pdf"
                             download
                             className="flex items-center gap-2 px-4 py-2 md:px-5 md:py-2 rounded-full bg-brand-yellow text-black text-xs md:text-sm font-bold hover:bg-[#E5C000] transition-all transform hover:-translate-y-0.5 shadow-[0_0_15px_rgba(255,211,0,0.3)] hover:shadow-[0_0_20px_rgba(255,211,0,0.5)]"
                         >
