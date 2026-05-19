@@ -7,15 +7,18 @@ import askpuimg from '../assets/AskPu.jpg';
 import valoreimg from '../assets/valore-billingsoftware.png';
 import portfolioimg from '../assets/portfolioimg.png';
 import joyofcomputing from '../assets/pythonnptel.png';
+import invisibleapiimg from '../assets/invisibleapi.png';
+import carepingimg from '../assets/careping.png';
 
 export const portfolioData = {
     name: "Arshad Bava M",
     title: "Software Developer",
     education: [
         {
-            year: "2024 - Present",
+            year: "2024 - 2026",
             degree: "Master of Computer Applications (MCA)",
             institution: "Pondicherry University",
+            cgpa: "7.5",
             logo: pondicherryLogo,
             description: "Relevant Coursework: Data Structures and Algorithms, Advanced Web Technologies, Database Management Systems, Object-Oriented Programming, Software Engineering, Cloud Computing"
         },
@@ -23,6 +26,7 @@ export const portfolioData = {
             year: "2021 - 2024",
             degree: "Bachelor of Science in Mathematics",
             institution: "Calicut University",
+            cgpa: "5.8",
             logo: calicutLogo,
             description: "Relevant Coursework: Linear Algebra, Calculus, Statistics and Probability, Discrete Mathematics"
         },
@@ -32,7 +36,7 @@ export const portfolioData = {
             id: 1,
             company: "Cyenosure- Enter The Technoverse",
             role: "Software Developer Intern",
-            period: "Dec 2025 – Present",
+            period: "Dec 2025 – Apr 2026",
             location: "Kochi, Ernakulam",
             description: "Working as a Software Developer Intern.",
             logo: cyenosureLogo,
@@ -73,27 +77,54 @@ export const portfolioData = {
     projects: [
         {
             id: 1,
-            title: "Personal Portfolio",
-            image: portfolioimg,
-            techStack: ["React", "Tailwind CSS", "Vite"],
-            description: "A modern, responsive portfolio website to showcase my skills and projects.",
-            link: "https://github.com/arshadbavam",
+            title: "Invisible Watermarking API",
+            role: "Full Stack Developer",
+            period: "Nov 2025 – Apr 2026",
+            image: invisibleapiimg,
+            techStack: ["FastAPI", "Python", "Pytest", "DWT/DCT/DFT"],
+            description: `Developed a production-ready REST API with 12 endpoints and 100% test pass rate by authoring 116 automated unit tests using Pytest; engineered a custom Block-DFT Log-Domain QIM algorithm that reduced Bit Error Rate from 50% to 0% while maintaining imperceptible image quality (PSNR > 38 dB).\n\nImplemented a browser-based frontend for real-time image processing and watermark visualization; applied signal processing best practices and optimized algorithmic performance through profiling and refactoring.`,
+            link: "https://github.com/ArshadBava/Invisible-Watermarking-API",
         },
         {
             id: 2,
+            title: "CarePing – Digital Healthcare Web Platform",
+            role: "Full Stack Developer",
+            period: "Jan 2026 – Feb 2026",
+            image: carepingimg,
+            techStack: ["React", "Django", "PostgreSQL"],
+            description: `Developed and deployed a modular healthcare booking system using React.js and Django, streamlining patient onboarding and appointment scheduling workflows as measured by reduced click-depth in user flow analysis.\n\nBuilt and integrated secure RESTful APIs facilitating real-time communication between frontend components and the PostgreSQL backend; maintained and enhanced application features following best practices for authentication and data security.`,
+            link: "https://github.com/ArshadBava",
+            liveLink: "https://careping.vercel.app/",
+        },
+        {
+            id: 3,
             title: "AskPU: An Intelligent Multilingual AI Chatbot",
+            role: "Full Stack Developer",
+            period: "Jul 2025 – Nov 2025",
             image: askpuimg,
             techStack: ["React", "Django", "PostgreSQL"],
             description: "Developed a full-stack multilingual AI chatbot (Ask PU) using Python, Django REST Framework, React.js, and PostgreSQL for 24/7 information services at Pondicherry University",
             link: "https://github.com/ArshadBava/ask-pu-chatbot",
         },
         {
-            id: 3,
+            id: 4,
             title: "Valore - Billing Software",
+            role: "Lead Developer",
+            period: "Oct 2025",
             image: valoreimg,
             techStack: ["Html", "Css", "JavaScript"],
             description: "A Billing Software for Men Clothing businesses.",
             link: "https://github.com/ArshadBava/billing-software",
+        },
+        {
+            id: 5,
+            title: "Personal Portfolio",
+            role: "Designer & Developer",
+            period: "Jan 2026",
+            image: portfolioimg,
+            techStack: ["React", "Tailwind CSS", "Vite"],
+            description: "A modern, responsive portfolio website to showcase my skills and projects.",
+            link: "https://github.com/arshadbavam",
         },
     ],
     certificates: [

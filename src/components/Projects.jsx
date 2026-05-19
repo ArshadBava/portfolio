@@ -42,7 +42,14 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-yellow transition-colors">{project.title}</h3>
+                                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-brand-yellow transition-colors">{project.title}</h3>
+                                {(project.role || project.period) && (
+                                    <div className="flex flex-wrap gap-2 mb-2">
+                                        {project.role && <span className="text-xs text-brand-yellow font-semibold">{project.role}</span>}
+                                        {project.role && project.period && <span className="text-xs text-text-secondary">·</span>}
+                                        {project.period && <span className="text-xs text-text-secondary">{project.period}</span>}
+                                    </div>
+                                )}
                                 <p className="text-text-secondary text-sm line-clamp-2 mb-4 font-light">{project.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.techStack.map((tech, i) => (
@@ -89,7 +96,20 @@ const Projects = () => {
                                     />
                                 </div>
                                 <div className="p-8 relative z-20 -mt-20">
-                                    <h3 className="text-4xl font-bold text-white mb-4">{selectedProject.title}</h3>
+                                    <h3 className="text-4xl font-bold text-white mb-2">{selectedProject.title}</h3>
+                                    {(selectedProject.role || selectedProject.period) && (
+                                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                                            {selectedProject.role && (
+                                                <span className="text-sm font-semibold text-brand-yellow">{selectedProject.role}</span>
+                                            )}
+                                            {selectedProject.role && selectedProject.period && (
+                                                <span className="text-text-secondary">·</span>
+                                            )}
+                                            {selectedProject.period && (
+                                                <span className="text-sm text-text-secondary">{selectedProject.period}</span>
+                                            )}
+                                        </div>
+                                    )}
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {selectedProject.techStack.map((tech, i) => (
                                             <span
@@ -100,11 +120,11 @@ const Projects = () => {
                                             </span>
                                         ))}
                                     </div>
-                                    <p className="text-text-secondary leading-relaxed mb-8 text-lg font-light border-l-2 border-brand-yellow/30 pl-4">
+                                    <p className="text-text-secondary leading-relaxed mb-8 text-lg font-light border-l-2 border-brand-yellow/30 pl-4 whitespace-pre-line">
                                         {selectedProject.description}
                                     </p>
 
-                                    <div className="flex gap-4">
+                                    <div className="flex gap-4 flex-wrap">
                                         <a
                                             href={selectedProject.link}
                                             target="_blank"
@@ -114,11 +134,17 @@ const Projects = () => {
                                             <Github size={20} />
                                             View Code
                                         </a>
-                                        {/* Example for live demo link if available */}
-                                        {/* <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-sm hover:border-brand-yellow hover:text-brand-yellow transition-colors font-bold uppercase tracking-wide">
-                                            <ExternalLink size={20} />
-                                            Live Demo
-                                        </a> */}
+                                        {selectedProject.liveLink && (
+                                            <a
+                                                href={selectedProject.liveLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-brand-yellow text-brand-yellow rounded-sm hover:bg-brand-yellow hover:text-black transition-colors font-bold uppercase tracking-wide"
+                                            >
+                                                <ExternalLink size={20} />
+                                                Live Demo
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>

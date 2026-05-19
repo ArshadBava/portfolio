@@ -41,6 +41,11 @@ const Education = () => {
                                         <div className="flex-1">
                                             <h3 className="text-2xl font-bold text-white">{edu.degree}</h3>
                                             <p className="text-lg text-brand-yellow mt-1 font-medium">{edu.institution}</p>
+                                            {edu.cgpa && (
+                                                <p className="mt-2 text-sm text-text-secondary">
+                                                    CGPA: <span className="text-brand-yellow font-bold">{edu.cgpa}</span>
+                                                </p>
+                                            )}
 
                                             {edu.description && (
                                                 <p className="text-text-secondary mt-4 text-sm leading-relaxed font-light border-t border-white/5 pt-4">
